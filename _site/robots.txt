@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://bschmanski.github.io/sitemap.xml
+Sitemap: /sitemap.xml
