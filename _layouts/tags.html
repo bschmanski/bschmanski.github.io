@@ -20,7 +20,7 @@ layout: default
 	<h1>All posts per tag</h1>
 	{% for tag in site.tags %}
 	{% capture tag_name %}{{ tag | first }}{% endcapture %}
-<h3>#{{ tag_name }}</h3>
+<h1>#{{ tag_name }}</h1>
     <ul>
       {% for post in site.tags[tag_name] %}
       
