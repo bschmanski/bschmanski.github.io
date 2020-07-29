@@ -1,13 +1,13 @@
-site: Gray - Single column blog and portfolio Jekyll theme
-url: # url
-author: # your name
+site: Bennett Schmanski
+url: https://bschmanski.github.io # url
+author: Bennett Schmanski # your name
 author:
-  name: # your name
-  email: # your email 
-  url: # url
+  name: Bennett Schmanski # your name
+  email: bennett@schmanski.net # your email 
+  url: https://bschmanski.github.io # url
   avatar: 
-title: Gray - Single column blog and portfolio Jekyll theme
-description: Gray - Single column blog and portfolio Jekyll theme
+title: Bennett Schmanski
+description: Bennett Schmanski
 logo: 
 image: 
 twitter: # twitter 
@@ -16,7 +16,7 @@ twitter:
   creator: # twitter
   card: summary
 social:
-  name: Ronalds Vilcins
+  name: 
   links:
     - https://twitter.com/example
     - https://www.dribbble.com/example
@@ -28,7 +28,7 @@ repository: ronv/website
 permalink: pretty
 
 disqus:
-  name: "your username" # required
+  shortname: bschmanski # required leave blank to disable
   noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
 
 paginate:            1000
@@ -56,7 +56,7 @@ collections:
     permalink: /:name
   posts:
     output: true
-    permalink: /:year/:month/:day/:slug
+    permalink: /blog/:year/:month/:day/:title
   projects:
     output: true
     permalink: /projects/:slug
