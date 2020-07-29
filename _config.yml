@@ -1,24 +1,95 @@
-collections:
-  authors:
-    output: true
+site: Bennett Schmanski
+url: bschmanski.github.io # url
+author: Bennett Schmanski # your name
+author:
+  name: Bennett Schmanski # your name
+  email: bennett@schmanski.net # your email 
+  url: bschmanski.github.io # url
+  avatar: 
+title: Bennett Schmanski
+description: Bennett Schmanski
+logo: 
+image: 
+twitter: # twitter 
+twitter:
+  username: # twitter
+  creator: # twitter
+  card: summary
+social:
+  name: 
+  links:
+    - https://twitter.com/example
+    - https://www.dribbble.com/example
+    - https://github.com/example
+    - https://codepen.io/example
+  
+repository: ronv/website
 
+permalink: pretty
+
+disqus:
+  shortname: bschmanski # required leave blank to disable
+  noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
+
+paginate:            1000
+paginate_path:       "/page:num/"
+baseurl:             ""
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - disqus-for-jekyll
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  projects:
+    output: true
+    permalink: /projects/:slug
+  art:
+    output: true
+    permalink: /art/:slug
+  
 defaults:
-  - scope:
+  -
+    scope:
       path: ""
-      type: "authors"
     values:
-      layout: "author"
-  - scope:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  - scope:
+  -
+    scope:
       path: ""
+      type: "projects"
     values:
-      layout: "default"
+      layout: "project"     
       
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
