@@ -1,8 +1,7 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
-gem 'jekyll'
-gem 'jekyll-paginate'
-gem 'jekyll-gist'
-gem 'jekyll-seo-tag'
-gem 'jekyll-sitemap'
-gem 'jekyll-git_metadata'
-gem 'disqus-for-jekyll'
+gemspec
+
+gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
+gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"

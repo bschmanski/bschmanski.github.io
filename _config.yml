@@ -1,95 +1,60 @@
-site: Bennett Schmanski
-url: https://bschmanski.github.io # url
-author: Bennett Schmanski # your name
-author:
-  name: Bennett Schmanski # your name
-  email: bennett@schmanski.net # your email 
-  url: https://bschmanski.github.io # url
-  avatar: 
 title: Bennett Schmanski
-description: Bennett Schmanski
-logo: 
-image: 
-twitter: # twitter 
-twitter:
-  username: # twitter
-  creator: # twitter
-  card: summary
-social:
-  name: 
-  links:
-    - https://twitter.com/example
-    - https://www.dribbble.com/example
-    - https://github.com/example
-    - https://codepen.io/example
-  
-repository: ronv/website
+author:
+  name: Bennett Schmanski
+  email: bennett@schmanski.net
+description: > # this means to ignore newlines until "show_excerpts:"
+  This website is a personal blog where I plan to ramble about topics that interest me. All of these views
+  are my own and do not reflect the views of any organization that I am a part of.
 
-permalink: pretty
+show_excerpts: true # set to true to show excerpts on the homepage
 
-disqus:
-  shortname: bschmanski # required leave blank to disable
-  noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
 
-paginate:            1000
-paginate_path:       "/page:num/"
-baseurl:             ""
-  
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
+  # generate social links in footer
+  social_links:
+    # twitter: jekyllrb
+    github:  bschmanski
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
 
-sass:
-  sass_dir:          _sass
-  style:            :compressed
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+ - about.md
+ - blog.md
+
+# Build settings
+theme: minima
 
 plugins:
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - disqus-for-jekyll
-
-collections:
-  pages:
-    output: true
-    permalink: /:name
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title
-  projects:
-    output: true
-    permalink: /projects/:slug
-  art:
-    output: true
-    permalink: /art/:slug
-  
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  -
-    scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"     
-      
-  - scope:
-      path: "assets/images"
-    values:
-      image: true
+ - jekyll-feed
+ - jekyll-seo-tag
