@@ -1,1 +1,1 @@
-My website found [here](bschmanski.github.io)
+My website found [here](https://bschmanski.github.io/)
